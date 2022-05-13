@@ -5,36 +5,37 @@
             margin: 0px;
             list-style-type: none;
         }
-        nav ul li img:hover{
-            zoom: 79%;
-        }
-        a{
-            text-decoration: none;
-            color: #e298e1;
-        }
-        a:hover{
-            color: white;
-            font-size: 19px;
+        .space-between{
+            justify-content: space-between;
         }
         .container{
             width: 100vw;
             padding: 0px 15px;
             margin: 0px auto;
         }
-        @media (min-width: 576px) {
+        .align-center{
+            align-items: center;
+        }
+        @media(min_width:300px){
+            .container{
+                max-width: 100%;
+            }
+        }
+        @media (min-width: 576px){
             .container{
                 max-width: 540px;
             }
         }
-        @media (min-width: 768px) {
+        @media (min-width: 768px){
             .container{
                 max-width: 720px;
             }
         }
-        @media (min-width: 992px) {
+        @media (min-width: 992px){
             .container{
                 max-width: 960px;
             }
+            
         }
         @media (min-width: 1200px) {
             .container{
@@ -50,79 +51,14 @@
         .align-center{
             align-items: center;
         }
-        .menu {
-            margin-top:20px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 3px;
+        img.name{
+            border-radius: 50%; 
+            height: 130px;
         }
-
-        .menu>li{
-            color: #e298e1;
-            width: 140px;
-            height: 40px;
-            line-height: 40px;
-            cursor: pointer;
-            font-size: 17px;
-           
+        img.name1{
+            margin-left: 30px;  
         }
-        /* .menu>li:hover{
-          
-             color: white;
-            font-size: 19px;
-        }*/
-        .sub-menu {
-            transform: scale(0);
-            transform-origin: top center;
-            transition: all 300ms ease-in-out;
-        }
-
-        .sub-menu li {
-            font-size: 14px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 8px 0;
-            color: white;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            transform: scale(0);
-            transform-origin: top center;
-            transition: all 300ms ease-in-out;
-            width: 70px;
-        }
-
-        .sub-menu li:last-child {
-            border-bottom: 0;
-        }
-
-        .sub-menu li:hover {
-            background: black;
-            color: white;
-        }
-
-        .menu>li:hover .sub-menu li {
-            transform: scale(1);
-            color: #e298e1;
-
-        }
-
-        .menu>li:hover .sub-menu{
-            transform: scale(1);
-            color: white;
-        }
-
-        .sub-menu>li {
-            padding-left: 5px;
-            margin-top: 0px;
-            width: 85%;
-            font-size: 17px;
-        }
-
         /* logo  */
-        
-        #logo2{
-            padding-top: 3px;
-        }
-        /* #logo:hover{
-            width: 55px;
-        } */
         #logo::before {
             content: "";
             position: absolute;
@@ -136,3 +72,67 @@
         #logo img{
             margin-right: 47px;
         }
+        /* nav-bar */
+        nav{
+            margin-top: 5px;
+        }
+        nav ul{
+            margin-top:20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 3px;
+        }
+        nav ul li{
+            position: relative;
+            color: #e298e1;
+            width: 140px;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+            font-size: 17px;
+        }
+        nav ul li a{
+            color: #e298e1;
+           text-decoration: none;
+           line-height: 19px;
+           font-size: 18px;
+           padding: 15px 20px;
+        }
+        nav ul ul{
+            position: absolute;
+            top: 19px;
+            border-radius: 5px;
+            transform: scale(0);
+            transform-origin: top center;
+            transition: all 300ms ease-in-out;
+            
+        }
+        nav ul ul li{
+            font-size: 14px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 8px 0;
+            color: white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            transform-origin: top center;
+            transition: all 300ms ease-in-out;
+        }
+        a{
+            text-decoration: none;
+            color: #e298e1;
+        }
+        nav ul li img:hover{
+            zoom: 79%;
+        }
+        a:hover{
+            color: white;
+            font-size: 19px;
+        }
+        nav ul ul li:hover{
+            background: black;
+            color: white;
+
+        }
+        nav ul li:hover > ul{
+            transform: scale(1);
+            color: #e298e1;
+        }
+
