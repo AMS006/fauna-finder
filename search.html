@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="search_css.css">
+</head>
+
+<body>
+    <!-- navbar  -->
+    <nav>
+    <ul class="container menu flex justify-center align">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="search.html"></a><img src="lens.png" id="logo2" width="50px" style="padding-top: 3px; "></li>
+        <li>
+            Quiz
+            <ul class="sub-menu">
+                <li><a href="Quiz.html">Quiz</a></li>
+                <li><a href="#">LeaderBoard</a></li>
+            </ul>
+        </li>
+        <li><a href="help.html " target="_blank">Contact US</a></li>
+    </ul>
+</nav>
+ <!-- search section  -->
+    <section>
+        <div class="main">
+            <img src="romoved name.png">
+            <div class="searchbx">
+                <input type="text" value="" class="query" placeholder="Search Animal" style="padding:5px; border-radius:5px;">
+                <div class="icons">
+                    <!-- <div><img src="search.png"></div> -->
+                    <!-- <div><img src="mic.png"></div> -->
+                </div>
+            </div>
+            <div class="button">
+                <button class="searchbtn">Search</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        let query=document.querySelector('.query');
+        let searchbtn=document.querySelector('.searchbtn');
+
+        searchbtn.onclick=function(){
+            let url='https://www.google.com/search?='+query.value;
+            window.open(url,'_self');
+        }
+    </script>
+</body>
+
+</html>
