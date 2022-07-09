@@ -5,8 +5,13 @@
             margin: 0px;
             list-style-type: none;
         }
-        
-        
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        html,body{
+            overflow-x: hidden;
+        }
         .navbar-dark .navbar-nav .nav-link{
             color: white;
         }
@@ -25,3 +30,10 @@
             fill: rgb(150, 100, 26);
             cursor: pointer;
         }
+.footer-top{
+    background-color: #020217;
+    color: white;
+}
+.lh-0{
+    line-height: 21px;
+}
