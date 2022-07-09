@@ -15,7 +15,12 @@
         .navbar-dark .navbar-nav .nav-link{
             color: white;
         }
-        
+        .cursor-pointer i:hover{
+            color: rgb(123, 123, 180);
+        }
+        .cursor-pointer{
+            cursor: pointer;
+        }
         .svg-image{
             justify-content: center;
             margin-top: 20px;
