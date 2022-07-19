@@ -21,16 +21,16 @@ a:hover {
     justify-content: space-between;
 }
 
-.container {
+/* .container {
     width: 100vw;
     padding: 0px 15px;
     margin: 0px auto;
-}
+} */
 
 .align-center {
     align-items: center;
 }
-
+/* 
 @media(min_width:300px) {
     .container {
         max-width: 100%;
@@ -60,7 +60,7 @@ a:hover {
     .container {
         max-width: 1152px;
     }
-}
+} */
 
 .flex {
     display: flex;
@@ -183,15 +183,11 @@ html {
 
 }
 
-.container3::before{
-    content: "";
-    height: 400px;
-    width: 657px;
-    margin-left: 500px;
-    position: absolute;
+.container3{
+   
+  
     background: url('contact-usimg.jpg') no-repeat center center/cover;
-    z-index: -1;
-    opacity: 1.3;
+  
 }
 
 .container1 {
