@@ -12,47 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-         *,*:after,*:before{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-}
-/* body{
-	font-family: arial;
-	font-size: 22px;
-	margin: 0;
-	background: #fff;
-	color: #000;
-} */
-
-.banner{
-	min-height: 100vh;
-	position: relative;
-	background-position: center center;
-	background-repeat: no-repeat;
-    background-size:auto 200%
-}
-.banner-overlay{
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 1;
-	pointer-events: none;
-	background:#000;
-
-	opacity: 0;
-}
-.section{
-	padding: 60px 30px;
-}
-/* .section h1{
-	font-size: 50px;
-} */
-    </style>
+   
 </head>
 <body>
     
@@ -372,41 +332,5 @@
 </div>
 </footer>
 </body>
-<script>
- var counter = 200;
-var opacityCount = 0;
-var lastScroll = 0;
-
-window.addEventListener("scroll",function(event){
-	var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-	if (currentScroll > 0 && lastScroll <= currentScroll){
-		lastScroll = currentScroll;
-		if( counter < 201   && counter > 100 ){
-			counter -= 1;
-			opacityCount += 0.015;
-			if(opacityCount >1){ opacityCount = 1}
-			console.log(counter)
-			$(".banner").css({"background-size":"auto "+counter+"%"});
-			$(".banner-overlay").css({"opacity":opacityCount});
-		}
-	}else{
-		lastScroll = currentScroll;
-		if( counter < 200 ){
-			counter += 1;
-			opacityCount -= 0.015;
-			if(opacityCount < 0.01){ opacityCount = 0.01}
-			console.log(counter)
-			$(".banner").css({"background-size":"auto "+counter+"%"});
-			$(".banner-overlay").css({"opacity":opacityCount});
-			
-		}
-	}
-});
-
-
-
- 
-
-</script>
 
 </html>
